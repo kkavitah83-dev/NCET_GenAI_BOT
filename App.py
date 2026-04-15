@@ -15,7 +15,7 @@ if st.button("Generate Content"):
     messages=[{"role": "user", "content": prompt}]
   )
 st.session__state.txt = response.choices[0].message.content
-text - response.choices[0].message.content
+text = response.choices[0].message.content
 st.write(text)
 #After Content Create - Download The File
 if "text" in st.session_state:
