@@ -9,12 +9,12 @@ product=st.text_input("product")
 audience=st.text_input("Audience")
 # Botton to Generate Content
 if st.button("Generate Content"):
-  prompt=f"Write marketting Content for {product} targeting {Audience},"
+  prompt=f"Write marketing Content for {product} targeting {Audience},"
   response= client.chat.completions.create(
     model="llama-3.3-70b-versatile",
     messages=[{"role": "user", "content": prompt}]
   )
-st.session__state.txt = response.choices[0].message.content
+st.session__state.text = response.choices[0].message.content
 text = response.choices[0].message.content
 st.write(text)
 #After Content Create - Download The File
