@@ -4,7 +4,7 @@ from groq import Groq
 st.set_page_config("SugnayanAI Context Generator",layout="wide")
 st.title("sugnayanAI- context Generator")
 st.image("Screenshot 2025-12-18 104441.png")
-client=Groq(api_key=st.secrets[GROQ_API_KEY"])
+client=Groq(api_key=st.secrets["GROQ_API_KEY"])
 product=st.text_input("product")
 audience=st.text_input("Audience")
 # Botton to Generate Content
